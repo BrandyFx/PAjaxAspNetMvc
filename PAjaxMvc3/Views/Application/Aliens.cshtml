@@ -1,0 +1,10 @@
+﻿@using PAjaxMvc3.Helpers
+<ul role="navigation">
+    <li>@Html.ActionLink("home", "index")</li>
+    <li>@Html.ActionLink("dinosaurs", "dinosaurs")</li>
+    <li>aliens</li>
+</ul>
+<img src="@Url.Content("~/Content/images/aliens.jpg")" alt="aliens" />
+@if (Request.IsPAjaxRequest()) {
+    @Html.PageTitle()
+}

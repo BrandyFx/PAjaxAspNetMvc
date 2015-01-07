@@ -1,0 +1,64 @@
+﻿@using PAjaxMvc3.Helpers
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8"/>
+  @Html.PageTitle()
+  <script src="@Url.Content("~/Scripts/jquery-2.1.3.min.js")"></script>
+  <script src="@Url.Content("~/Scripts/jquery.cookie.js")"></script>
+  <script src="@Url.Content("~/Scripts/jquery.pjax.js")"></script>
+  <script src="@Url.Content("~/Scripts/pages.js")"></script>
+  <script>
+    (function($) {
+        $(function() {
+            $('ul[role=navigation] a').pjax('#main'); // pjax
+        })
+    })(jQuery);
+  </script>
+  <style>
+    pre{
+      float:left;
+    }
+    #main{
+      font-family: Helvetica,Arial,sans-serif;
+      float: left;
+      margin-left: -120px;
+      padding-top: 80px;
+      width: 30%;
+    }
+    ul { padding-left: 15px; }
+  </style>
+</head>
+<body>
+<pre>
+
+               ／￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣￣
+               |　<strong>It's @DateTime.Now.ToLongTimeString()</strong>
+               ＼＿　 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+        .--.     (  )
+       /    \   ( )
+      ## a  a  .
+      (   '._)
+       |'-- |
+     _.\___/_   ___<label><input type="checkbox" name="pjax" />pjax</label>___
+   ."\> \Y/|<'.  '._.-'
+  /  \ \_\/ /  '-' /
+  | --'\_/|/ |   _/
+  |___.-' |  |`'`
+    |     |  |
+    |    / './
+   /__./` | |
+      \   | |
+       \  | |
+       ;  | |
+       /  | |
+ jgs  |___\_.\_
+      `-"--'---'
+
+<a href="https://github.com/defunkt/jquery-pjax">github.com/defunkt/jquery-pjax</a>
+</pre>
+<div id="main">
+    @RenderBody()
+</div>
+</body>
+</html>

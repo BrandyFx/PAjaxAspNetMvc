@@ -1,0 +1,17 @@
+﻿@using PAjaxMvc3.Helpers
+<ul role="navigation">
+    <li>@Html.ActionLink("home", "index")</li>
+    <li>dinosaurs</li>
+    <li>@Html.ActionLink("aliens", "aliens")</li>
+</ul>
+<iframe 
+    title="YouTube video player"
+    width="480"
+    height="390"
+    src="http://www.youtube.com/embed/GcjxwXCxBBU"
+    frameborder="0" 
+    allowfullscreen>
+</iframe>
+@if (Request.IsPAjaxRequest()) {
+    @Html.PageTitle()
+}

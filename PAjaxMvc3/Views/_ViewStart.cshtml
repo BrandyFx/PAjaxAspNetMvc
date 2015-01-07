@@ -1,0 +1,6 @@
+﻿@using PAjaxMvc3.Helpers
+@{
+    if (!Request.IsPAjaxRequest()) {
+        Layout = "~/Views/Shared/_Layout.cshtml";
+    }
+}
