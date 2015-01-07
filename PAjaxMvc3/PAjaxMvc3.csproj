@@ -100,8 +100,10 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Helpers\HtmlHelperExtensions.cs" />
-    <Compile Include="Helpers\HttpRequestBaseExtensions.cs" />
+    <Compile Include="Helpers\PJaxHttpRequestBaseExtensions.cs" />
+    <Compile Include="Helpers\Pjax.cs" />
+    <Compile Include="Helpers\PjaxControllerExtensions.cs" />
+    <Compile Include="Helpers\PjaxViewResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -9,30 +9,30 @@ namespace PAjaxMvc3.Controllers
         {
             ViewBag.Title = "Home";
 
-            return PAjax();
+            return Pjax();
         }
 
         public ActionResult Dinosaurs()
         {
             ViewBag.Title = "Dinosaurs";
 
-            return PAjax();
+            return Pjax();
         }
 
         public ActionResult Aliens()
         {
             ViewBag.Title = "Aliens";
 
-            return PAjax();
+            return Pjax();
         }
 
-        protected ActionResult PAjax(
+        protected ActionResult Pjax(
             string viewName = null,
             string masterName = null,
             object model = null)
         {
             return Request.IsPAjaxRequest() ?
-                   PartialView(viewName, model) :
+                   this.PJaxView(viewName, model) :
                    View(viewName, model) as ActionResult;
         }
     }
